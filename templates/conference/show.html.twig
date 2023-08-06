@@ -6,7 +6,8 @@
     <h2>{{ conference }} Конференция</h2>
 
     {% if comments|length > 0 %}
-        <div>There are {{ comments|length }} comments</div>
+
+        <div>Показан(о) {{ comments|length }} комментарий(ев)</div>
 
         {% for comment in comments %}
             {% if comment.photofilename %}
@@ -29,6 +30,6 @@
         {% endif %}
         
     {% else %}
-        <div>No comments have been posted yet for this conference.</div>
+        <div>Еще нет комментариев об этой конференции</div>
     {% endif %}
 {% endblock %}
